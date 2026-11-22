@@ -24,19 +24,11 @@ app = FastAPI(
     version="3.0.0"
 )
 
-# CORS Middleware: Izinkan localhost dan seluruh domain Vercel / Railway
-origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
-
+# CORS Middleware: Izinkan semua origin (Vercel, Railway, Localhost) untuk API publik
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_origin_regex=r"https://.*\.vercel\.app",
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
