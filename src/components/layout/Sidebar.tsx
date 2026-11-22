@@ -62,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
             {(!collapsed || mobileOpen) && (
               <div className="flex flex-col truncate">
-                <span className="font-bold text-base tracking-wide text-[#F8FAFC]">PhishingGuard</span>
+                <span className="font-bold text-base tracking-wide text-[#F8FAFC]">Phising Guard</span>
                 <span className="text-[10px] text-[#22D3EE] font-mono tracking-wider">SENTINEL v1.0</span>
               </div>
             )}
