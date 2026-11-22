@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #6366F1;
+    --primary-hover: #818CF8;
+    --secondary: #22D3EE;
+
+    /* Dark Mode Tokens (Default) */
+    --bg-main: #0F1117;
+    --surface: #1A1D27;
+    --surface-raised: #252836;
+    --border: #2E3347;
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+
+    --status-success: #10B981;
+    --status-warning: #F59E0B;
+    --status-danger: #EF4444;
+    --status-info: #3B82F6;
+  }
+
+  html.light {
+    --bg-main: #F1F5F9;
+    --surface: #FFFFFF;
+    --surface-raised: #F8FAFC;
+    --border: #E2E8F0;
+
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Light mode overrides for semantic surface classes */
+html.light .bg-\[\#0F1117\]:not(.hero-section *) {
+  background-color: #F8FAFC !important;
+}
+
+html.light .bg-\[\#1A1D27\]:not(.hero-section):not(.hero-section *) {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#1A1D27\]\/80 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.light .bg-\[\#252836\]:not(.hero-section *) {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .bg-\[\#252836\]\/60 {
+  background-color: rgba(241, 245, 249, 0.75) !important;
+}
+
+html.light .border-\[\#2E3347\]:not(.hero-section):not(.hero-section *) {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .border-\[\#2E3347\]\/60 {
+  border-color: rgba(226, 232, 240, 0.8) !important;
+}
+
+/* Text overrides in Light mode (Hero section dikecualikan agar tetap putih) */
+html.light .text-\[\#F8FAFC\]:not(.hero-section *) {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#94A3B8\]:not(.hero-section *) {
+  color: #475569 !important;
+}
+
+html.light .text-\[\#64748B\]:not(.hero-section *) {
+  color: #64748B !important;
+}
+
+html.light .hover\:bg-\[\#252836\]:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .hover\:bg-\[\#2E3347\]:hover {
+  background-color: #E2E8F0 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366F1;
+}

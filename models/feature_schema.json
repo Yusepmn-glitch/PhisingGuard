@@ -1,0 +1,34 @@
+{
+  "features": [
+    "URLLength",
+    "DomainLength",
+    "IsDomainIP",
+    "TLDLength",
+    "NoOfSubDomain",
+    "HasObfuscation",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfLettersInURL",
+    "LetterRatioInURL",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS",
+    "CharContinuationRate",
+    "URLSimilarityIndex",
+    "TLDLegitimateProb",
+    "URLCharProb"
+  ],
+  "n_features": 22,
+  "target_classes": {
+    "0": "Phishing",
+    "1": "Legitimate"
+  },
+  "random_state": 42,
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 100
+}

@@ -1,0 +1,193 @@
+{
+  "model_version": "Clean-v2.0 (Zero-Leakage)",
+  "dataset_name": "PhiUSIIL Phishing URL Dataset (Deduplicated)",
+  "initial_samples": 235795,
+  "deduplicated_samples": 235370,
+  "removed_duplicates": 425,
+  "train_samples": 188296,
+  "test_samples": 47074,
+  "features_used": [
+    "URLLength",
+    "DomainLength",
+    "IsDomainIP",
+    "TLDLength",
+    "NoOfSubDomain",
+    "HasObfuscation",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfLettersInURL",
+    "LetterRatioInURL",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS",
+    "CharContinuationRate"
+  ],
+  "pruned_features": [
+    "URLSimilarityIndex",
+    "TLDLegitimateProb",
+    "URLCharProb"
+  ],
+  "stratified_test_metrics": {
+    "accuracy": 0.9973,
+    "macro_average": {
+      "precision": 0.9975,
+      "recall": 0.9969,
+      "f1_score": 0.9972
+    },
+    "weighted_average": {
+      "precision": 0.9973,
+      "recall": 0.9973,
+      "f1_score": 0.9973
+    },
+    "phishing_class_0": {
+      "precision": 0.9988,
+      "recall": 0.9948,
+      "f1_score": 0.9968
+    },
+    "legitimate_class_1": {
+      "precision": 0.9962,
+      "recall": 0.9991,
+      "f1_score": 0.9976
+    },
+    "confusion_matrix": {
+      "raw": [
+        [
+          20000,
+          104
+        ],
+        [
+          25,
+          26945
+        ]
+      ],
+      "true_positive": 20000,
+      "false_negative": 104,
+      "false_positive": 25,
+      "true_negative": 26945
+    },
+    "classification_report": {
+      "Phishing (0)": {
+        "precision": 0.9987515605493134,
+        "recall": 0.9948269001193792,
+        "f1-score": 0.9967853671908097,
+        "support": 20104.0
+      },
+      "Legitimate (1)": {
+        "precision": 0.9961551258826574,
+        "recall": 0.9990730441230997,
+        "f1-score": 0.9976119513504508,
+        "support": 26970.0
+      },
+      "accuracy": 0.9972596337681098,
+      "macro avg": {
+        "precision": 0.9974533432159853,
+        "recall": 0.9969499721212395,
+        "f1-score": 0.9971986592706302,
+        "support": 47074.0
+      },
+      "weighted avg": {
+        "precision": 0.997263991127558,
+        "recall": 0.9972596337681098,
+        "f1-score": 0.9972589401777138,
+        "support": 47074.0
+      }
+    }
+  },
+  "domain_group_split_metrics": {
+    "accuracy": 0.9975,
+    "macro_f1_score": 0.9974,
+    "confusion_matrix": [
+      [
+        19627,
+        82
+      ],
+      [
+        36,
+        26887
+      ]
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "IsHTTPS",
+      "importance": 0.382
+    },
+    {
+      "feature": "NoOfOtherSpecialCharsInURL",
+      "importance": 0.1341
+    },
+    {
+      "feature": "DegitRatioInURL",
+      "importance": 0.0777
+    },
+    {
+      "feature": "LetterRatioInURL",
+      "importance": 0.0752
+    },
+    {
+      "feature": "NoOfDegitsInURL",
+      "importance": 0.0653
+    },
+    {
+      "feature": "SpacialCharRatioInURL",
+      "importance": 0.0581
+    },
+    {
+      "feature": "NoOfLettersInURL",
+      "importance": 0.055
+    },
+    {
+      "feature": "URLLength",
+      "importance": 0.0538
+    },
+    {
+      "feature": "NoOfSubDomain",
+      "importance": 0.0367
+    },
+    {
+      "feature": "CharContinuationRate",
+      "importance": 0.0297
+    },
+    {
+      "feature": "DomainLength",
+      "importance": 0.021
+    },
+    {
+      "feature": "TLDLength",
+      "importance": 0.0105
+    },
+    {
+      "feature": "NoOfQMarkInURL",
+      "importance": 0.0005
+    },
+    {
+      "feature": "NoOfEqualsInURL",
+      "importance": 0.0003
+    },
+    {
+      "feature": "NoOfAmpersandInURL",
+      "importance": 0.0
+    },
+    {
+      "feature": "IsDomainIP",
+      "importance": 0.0
+    },
+    {
+      "feature": "NoOfObfuscatedChar",
+      "importance": 0.0
+    },
+    {
+      "feature": "ObfuscationRatio",
+      "importance": 0.0
+    },
+    {
+      "feature": "HasObfuscation",
+      "importance": 0.0
+    }
+  ]
+}

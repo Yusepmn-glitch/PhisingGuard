@@ -1,0 +1,228 @@
+{
+  "artifact_status": {
+    "models/final/random_forest_model.joblib": {
+      "exists": true,
+      "size_bytes": 5702547,
+      "readable": true
+    },
+    "models/final/feature_schema.json": {
+      "exists": true,
+      "size_bytes": 641,
+      "readable": true
+    },
+    "models/final/evaluation_metrics.json": {
+      "exists": true,
+      "size_bytes": 7498,
+      "readable": true
+    },
+    "models/final/training_metadata.json": {
+      "exists": true,
+      "size_bytes": 366,
+      "readable": true
+    },
+    "src/feature_extractor.py": {
+      "exists": true,
+      "size_bytes": 4215,
+      "readable": true
+    },
+    "train_model_final.py": {
+      "exists": true,
+      "size_bytes": 14286,
+      "readable": true
+    }
+  },
+  "predictions": [
+    {
+      "url": "https://www.google.com",
+      "prediction": "LEGITIMATE",
+      "class_index": 1,
+      "prob_legit": 0.9976494041714978,
+      "prob_phish": 0.0023505958285025526,
+      "latency_ms": 6967.25,
+      "features": {
+        "URLLength": 22,
+        "DomainLength": 14,
+        "IsDomainIP": 0,
+        "TLDLength": 3,
+        "NoOfSubDomain": 1,
+        "NoOfLettersInURL": 17,
+        "LetterRatioInURL": 0.7727,
+        "NoOfDegitsInURL": 0,
+        "DegitRatioInURL": 0.0,
+        "NoOfEqualsInURL": 0,
+        "NoOfQMarkInURL": 0,
+        "NoOfAmpersandInURL": 0,
+        "NoOfOtherSpecialCharsInURL": 5,
+        "SpacialCharRatioInURL": 0.2273,
+        "IsHTTPS": 1,
+        "CharContinuationRate": 0.3529
+      }
+    },
+    {
+      "url": "https://www.wikipedia.org",
+      "prediction": "LEGITIMATE",
+      "class_index": 1,
+      "prob_legit": 0.9985479157372723,
+      "prob_phish": 0.0014520842627281359,
+      "latency_ms": 1538.92,
+      "features": {
+        "URLLength": 25,
+        "DomainLength": 17,
+        "IsDomainIP": 0,
+        "TLDLength": 3,
+        "NoOfSubDomain": 1,
+        "NoOfLettersInURL": 20,
+        "LetterRatioInURL": 0.8,
+        "NoOfDegitsInURL": 0,
+        "DegitRatioInURL": 0.0,
+        "NoOfEqualsInURL": 0,
+        "NoOfQMarkInURL": 0,
+        "NoOfAmpersandInURL": 0,
+        "NoOfOtherSpecialCharsInURL": 5,
+        "SpacialCharRatioInURL": 0.2,
+        "IsHTTPS": 1,
+        "CharContinuationRate": 0.45
+      }
+    },
+    {
+      "url": "https://example.com",
+      "prediction": "PHISHING_DETECTED",
+      "class_index": 0,
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 956.51,
+      "features": {
+        "URLLength": 19,
+        "DomainLength": 11,
+        "IsDomainIP": 0,
+        "TLDLength": 3,
+        "NoOfSubDomain": 0,
+        "NoOfLettersInURL": 15,
+        "LetterRatioInURL": 0.7895,
+        "NoOfDegitsInURL": 0,
+        "DegitRatioInURL": 0.0,
+        "NoOfEqualsInURL": 0,
+        "NoOfQMarkInURL": 0,
+        "NoOfAmpersandInURL": 0,
+        "NoOfOtherSpecialCharsInURL": 4,
+        "SpacialCharRatioInURL": 0.2105,
+        "IsHTTPS": 1,
+        "CharContinuationRate": 0.4667
+      }
+    },
+    {
+      "url": "http://192.168.1.1/login",
+      "prediction": "PHISHING_DETECTED",
+      "class_index": 0,
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 579.21,
+      "features": {
+        "URLLength": 24,
+        "DomainLength": 11,
+        "IsDomainIP": 1,
+        "TLDLength": 0,
+        "NoOfSubDomain": 0,
+        "NoOfLettersInURL": 9,
+        "LetterRatioInURL": 0.375,
+        "NoOfDegitsInURL": 8,
+        "DegitRatioInURL": 0.3333,
+        "NoOfEqualsInURL": 0,
+        "NoOfQMarkInURL": 0,
+        "NoOfAmpersandInURL": 0,
+        "NoOfOtherSpecialCharsInURL": 7,
+        "SpacialCharRatioInURL": 0.2917,
+        "IsHTTPS": 0,
+        "CharContinuationRate": 0.5556
+      }
+    },
+    {
+      "url": "https://secure-login-account-update.example.xyz",
+      "prediction": "PHISHING_DETECTED",
+      "class_index": 0,
+      "prob_legit": 0.42,
+      "prob_phish": 0.58,
+      "latency_ms": 1078.29,
+      "features": {
+        "URLLength": 47,
+        "DomainLength": 39,
+        "IsDomainIP": 0,
+        "TLDLength": 3,
+        "NoOfSubDomain": 1,
+        "NoOfLettersInURL": 39,
+        "LetterRatioInURL": 0.8298,
+        "NoOfDegitsInURL": 0,
+        "DegitRatioInURL": 0.0,
+        "NoOfEqualsInURL": 0,
+        "NoOfQMarkInURL": 0,
+        "NoOfAmpersandInURL": 0,
+        "NoOfOtherSpecialCharsInURL": 8,
+        "SpacialCharRatioInURL": 0.1702,
+        "IsHTTPS": 1,
+        "CharContinuationRate": 0.1795
+      }
+    }
+  ],
+  "robustness": [
+    {
+      "input": "",
+      "desc": "URL Kosong",
+      "status": "REJECTED",
+      "error": "Input tidak valid: URL kosong atau format tidak memiliki domain/host yang valid."
+    },
+    {
+      "input": "   ",
+      "desc": "URL Whitespace",
+      "status": "REJECTED",
+      "error": "Input tidak valid: URL kosong atau format tidak memiliki domain/host yang valid."
+    },
+    {
+      "input": "google.com",
+      "desc": "URL Tanpa Skema (google.com)",
+      "status": "PROCESSED",
+      "prediction": "PHISHING_DETECTED",
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 633.6
+    },
+    {
+      "input": "http://localhost:8080/dashboard",
+      "desc": "URL dengan Port (localhost:8080)",
+      "status": "REJECTED",
+      "error": "Input tidak valid: URL kosong atau format tidak memiliki domain/host yang valid."
+    },
+    {
+      "input": "https://subdomain.example.com/search?q=test&lang=en&page=2#top",
+      "desc": "URL dengan Query & Fragment",
+      "status": "PROCESSED",
+      "prediction": "PHISHING_DETECTED",
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 844.18
+    },
+    {
+      "input": "https://sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.sub.example.com/deep/path",
+      "desc": "URL dengan Subdomain Panjang",
+      "status": "PROCESSED",
+      "prediction": "PHISHING_DETECTED",
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 767.49
+    },
+    {
+      "input": "https://user:pass@example.com:8443/test?a=1&b=2#sec",
+      "desc": "URL dengan Karakter Khusus & Auth Token",
+      "status": "PROCESSED",
+      "prediction": "PHISHING_DETECTED",
+      "prob_legit": 0.0,
+      "prob_phish": 1.0,
+      "latency_ms": 882.74
+    },
+    {
+      "input": "not-a-valid-url-at-all",
+      "desc": "String Non-URL Acak",
+      "status": "REJECTED",
+      "error": "Input tidak valid: URL kosong atau format tidak memiliki domain/host yang valid."
+    }
+  ]
+}
