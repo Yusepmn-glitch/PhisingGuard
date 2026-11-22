@@ -33,6 +33,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# OPTIONS catch-all handler untuk browser preflight requests
+@app.options("/{rest_of_path:path}")
+def preflight_handler(rest_of_path: str):
+    return JSONResponse(content={"status": "preflight-ok"}, status_code=200)
+
 @app.get("/api/health", response_model=HealthResponse, tags=["System Health"])
 def get_health():
     """Mengembalikan status engine backend, status model, versi, dan jumlah fitur."""
