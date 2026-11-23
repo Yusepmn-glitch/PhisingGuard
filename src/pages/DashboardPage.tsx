@@ -158,7 +158,7 @@ export const DashboardPage: React.FC = () => {
             <div className="relative w-52 h-52 flex items-center justify-center">
               <div className="absolute inset-0 bg-[#6366F1]/20 rounded-full blur-2xl"></div>
               <img
-                src="/src/assets/hero.png"
+                src="/hero.png"
                 alt="Sentinel 3D Shield"
                 className="relative z-10 w-44 h-44 object-contain drop-shadow-[0_20px_25px_rgba(99,102,241,0.35)]"
               />
